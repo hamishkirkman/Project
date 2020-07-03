@@ -13,6 +13,6 @@ router.get('/login', function(req, res, next) {
 
 /* GET register page. */
 router.get('/register', function(req, res, next) {
-  res.render('register', { title: 'Login'});
+  res.render('register', { title: 'Register'});
 });
 module.exports = router;
