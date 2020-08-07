@@ -122,6 +122,9 @@ class UserController{
     getRegister(request, response, next) {
         response.render('register');
     }
+    getAccount(request, response, next) {
+        response.render('account');
+    }
 
 
     /* YOU NEED TO ADD COMMENTS FROM HERE ON */
@@ -172,6 +175,8 @@ class UserController{
 
     };
 
+    // Request checks if a session already exists (a user is logged in), otherwise redirect to the home page ('/') //
+    // Response renders the account page if the request command is false //
     getAccount(request, response){
         
         if (!request.session.token) {

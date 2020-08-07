@@ -1,0 +1,11 @@
+<%- include('partials/header'); %>
+<form action="/account" method="post" enctype="multipart/form-data">
+    <input type="text" name="displayName" placeholder="Display Name">
+    <input type="email" name="email" placeholder="Email">
+    <input type="file" name="avatar">
+      <button type="submit">Update</button>
+	<input type="password" name="password" placeholder="Password">
+	<input type="password" name="passwordConfirm" placeholder="Confirm Password">
+	<button type="submit">Update Password</button>
+</form>
+<%- include('partials/footer'); %>
