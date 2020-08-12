@@ -1,11 +1,12 @@
 <%- include('partials/header'); %>
 <form action="/account" method="post" enctype="multipart/form-data">
-    <input type="text" name="displayName" placeholder="Display Name">
-    <input type="email" name="email" placeholder="Email">
-    <input type="file" name="avatar">
+    <input type="text" name="displayName" placeholder="Display Name" value="<%= locals.user.displayName %>">
+    <input type="email" name="email" placeholder="Email" value="<%= locals.user.email %>">
+    <input type="file" name="avatar" value="<%= locals.user.avatar %>">
       <button type="submit">Update</button>
-	<input type="password" name="password" placeholder="Password">
-	<input type="password" name="passwordConfirm" placeholder="Confirm Password">
+<form action="/account" method="post" enctype="multipart/form-data">
+	<input type="password" name="password" placeholder="Password" value="<%= locals.user.password %>">
+	<input type="password" name="passwordConfirm" placeholder="Confirm Password" value="<%= locals.user.passwordConfirm %>">
 	<button type="submit">Update Password</button>
 </form>
 <%- include('partials/footer'); %>
