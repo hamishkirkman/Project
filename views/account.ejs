@@ -9,7 +9,7 @@
     <p class="alert alert-primary" role="alert"><%= error %></p>
     <% }) %>
   <% } %>
-<form action="/account" method="post" enctype="multipart/form-data">
+<form action="/account" method="post" enctype="multipart/form-data" style="margin-right: 100px;margin-top: 25px;margin-left: 100px;">
     <div class="form-group">
       <div class="form-group">
         <label for="username">Username</label>
@@ -23,8 +23,10 @@
       <input type="file" class="form-control-file" id="avatar">
     </div>
     <button type="submit" class="btn btn-primary">Update</button>
+
 <form>
-      <div class="form-group">
+  <form action="/password" method="post">
+    <div class="form-group" style="margin-top: 25px">
         <label for="password">Password</label>
         <input type="password" class="form-control" name="password" placeholder="Password" id="password">
       </div>

@@ -116,6 +116,7 @@ class UserController{
         }
     };
 
+    // Renders login, register, channels and account pages //
     getLogin(request, response, next) {
         response.render('login');
     }
@@ -125,6 +126,10 @@ class UserController{
     getAccount(request, response, next) {
         response.render('account');
     }
+    getChannels(request, response, next) {
+        response.render('channels');
+    }
+
 
 
     /* YOU NEED TO ADD COMMENTS FROM HERE ON */
@@ -176,7 +181,7 @@ class UserController{
     };
 
     // Request checks if a session already exists (a user is logged in), otherwise redirect to the home page ('/') //
-    // Response renders the account page if the request command is false //
+    // Response renders the account page if the user is logged in //
     getAccount(request, response){
         
         if (!request.session.token) {
@@ -185,6 +190,8 @@ class UserController{
         response.render('account');
     }
 
+    // Request shows a message telling the user that they have logged out, and destroys their session //
+    // Response checks firebase to see if the user is logged out, and if so, redirect to home page. If there is an error also redirect to home page //
     logout = async (request, response) => {
         request.session.errors.general = ['You have been logged out'];
         response.locals.loggedin = false;
