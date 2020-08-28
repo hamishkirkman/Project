@@ -10,17 +10,20 @@
     <% }) %>
   <% } %>
 <form action="/account" method="post" enctype="multipart/form-data" style="margin-right: 75px;margin-top: 25px;margin-left: 75px;">
-    <div class="form-group">
-      <div class="form-group">
-        <label for="username">Username</label>
-        <input type="text" class="form-control" name="displayName" placeholder="Display Name" value="<%= locals.user.displayName %>">
-      </div>
+  <div class="form-group">
+    <label for="username">Username</label>
+    <input type="text" class="form-control" name="displayName" placeholder="Display Name" value="<%= locals.user.displayName %>">
+  </div>  
+  <div class="form-group">
       <label for="email">Email address</label>
       <input type="email" class="form-control" name="email" placeholder="Email" aria-describedby="emailHelp" value="<%= locals.user.email %>">
     </div>
+    <div class="form-group"> // Fix this avatar image dispay issue //
+      <img src="<%= locals.user.avatar %>">
+    </div>
     <div class="form-group">
       <label for="avatar">Avatar</label>
-      <input type="file" class="form-control-file" id="avatar" value="<%= locals.user.avatar %>">
+      <input type="file" class="form-control-file" id="avatar" name="avatar">
     </div>
     <button type="submit" class="btn btn-primary">Update</button>
 </form>
