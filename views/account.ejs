@@ -18,8 +18,9 @@
       <label for="email">Email address</label>
       <input type="email" class="form-control" name="email" placeholder="Email" aria-describedby="emailHelp" value="<%= locals.user.email %>">
     </div>
-    <div class="form-group"> // Fix this avatar image dispay issue //
-      <img src="<%= locals.user.avatar %>">
+    <label for="email">Current Avatar</label>
+    <div class="current-avatar">
+      <img src="<%= locals.user.photoURL %>" width="250">
     </div>
     <div class="form-group">
       <label for="avatar">Avatar</label>

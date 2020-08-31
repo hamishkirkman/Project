@@ -1,16 +1,6 @@
 <%- include('partials/header'); %>
-<% if (locals.errors && locals.errors.owned-channels){ %>
-	<% locals.errors.owned-channels.forEach(function(error) { %>
-	  <p class="alert alert-primary" role="alert"><%= error %></p>
-	  <% }) %>
-	<% } %>
-<% if (locals.errors && locals.errors.subscribed-channels){ %>
-	<% locals.errors.subscribed-channels.forEach(function(error) { %>
-	  <p class="alert alert-primary" role="alert"><%= error %></p>
-	  <% }) %>
-	<% } %>
-<% if (locals.errors && locals.errors.user-channels){ %>
-	<% locals.errors.user-channels.forEach(function(error) { %>
+<% if (locals.errors && locals.errors.channels.general){ %>
+	<% locals.errors.channels.general.forEach(function(error) { %>
 	  <p class="alert alert-primary" role="alert"><%= error %></p>
 	  <% }) %>
 	<% } %>
