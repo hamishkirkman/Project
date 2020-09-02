@@ -18,10 +18,12 @@
       <label for="email">Email address</label>
       <input type="email" class="form-control" name="email" placeholder="Email" aria-describedby="emailHelp" value="<%= locals.user.email %>">
     </div>
-    <label for="email">Current Avatar</label>
-    <div class="current-avatar">
-      <img src="<%= locals.user.photoURL %>" width="250">
-    </div>
+    <% if (locals.user.photoURL) { %>
+    <label for="avatar">Current Avatar</label>
+    <p class="current-avatar">
+      <img src="<%= locals.user.photoURL %>" width="250px">
+    </p>
+    <% } %>
     <div class="form-group">
       <label for="avatar">Avatar</label>
       <input type="file" class="form-control-file" id="avatar" name="avatar">
