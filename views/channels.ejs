@@ -20,7 +20,7 @@ var subscribed = ("subscribed" in  channels) ? channels.subscribed : false %>
 							<ul>
 							<% owned.forEach(function(channel) { %>
 								<li>
-									<img src="<%= channel.image %>" alt="<%= channel.name %>">
+									<img src="<%= channel.image %>" alt="<%= channel.name %>" width="250px">
 									<a href="/channel/<%= channel.id %>/"><%= channel.name %></a>
 									<a href="/channels/delete/<%= channel.id %>/"><i class="fa fa-trash" aria-hidden="true"></i></a>
 								</li>
@@ -34,7 +34,7 @@ var subscribed = ("subscribed" in  channels) ? channels.subscribed : false %>
 							<ul>
 							<% subscribed.forEach(function(channel) { %>
 								<li>
-									<img src="<%= channel.image %>" alt="<%= channel.name %>">
+									<img src="<%= channel.image %>" alt="<%= channel.name %>" width="250px">
 									<a href="/channel/<%= channel.slug %>/"><%= channel.name %></a>
 								</li>
 							<% }) %>
@@ -61,8 +61,10 @@ var subscribed = ("subscribed" in  channels) ? channels.subscribed : false %>
 							</div>
 							<% if (users) { %>
 								<% users.forEach(function(user) { %>
-									<input class="form-check-input" id="user<%= user.id %>" type="checkbox" name="users" value="<%= user.id %>">
+									<div class="form-group" style="padding-left: 20px;">
+										<input class="form-check-input" id="user<%= user.id %>" type="checkbox" name="users" value="<%= user.id %>">
 									<p><%= user.name %></p>
+									</div>
 								<% }) %>
 							<% } %>
 							<button type="update" class="btn btn-primary">Create Channel</button>
