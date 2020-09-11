@@ -1,4 +1,14 @@
-<%- include('partials/header'); %> 
+<%- include('partials/header'); %>
+<% if (locals.errors && locals.errors.login){ %>
+	<% locals.errors.login.forEach(function(error) { %>
+		<p class="alert alert-primary" role="alert"><%= error %></p>
+	<% }) %>
+<% } %>
+<% if (locals.errors && locals.errors.register){ %>
+	<% locals.errors.register.forEach(function(error) { %>
+		<p class="alert alert-primary" role="alert"><%= error %></p>
+	<% }) %>
+<% } %> 
 <div id="main">
   <div class="container-fluid">
     <div class="row">
