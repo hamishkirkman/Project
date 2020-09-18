@@ -1,9 +1,4 @@
 <%- include('partials/header'); %>
-<% if (locals.errors && locals.errors.register){ %>
-	<% locals.errors.register.forEach(function(error) { %>
-		<p class="alert alert-primary" role="alert"><%= error %></p>
-	<% }) %>
-<% } %> 
 <form action="/register" method="post" style="margin-right: 75px;margin-top: 25px;margin-left: 75px;">
 		<div class="form-group">
 		  <label for="email">Email address</label>

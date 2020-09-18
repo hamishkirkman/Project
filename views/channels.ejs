@@ -61,7 +61,7 @@ var subscribed = ("subscribed" in  channels) ? channels.subscribed : false %>
 							</div>
 							<% if (users) { %>
 								<% users.forEach(function(user) { %>
-									<div class="form-group" style="padding-left: 20px;">
+									<div class="container" style="padding-left: 20px;">
 										<input class="form-check-input" id="user<%= user.id %>" type="checkbox" name="users" value="<%= user.id %>">
 									<p><%= user.name %></p>
 									</div>
